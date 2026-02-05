@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+}
+
+.topbar {
+    background: url('resources/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    z-index: 3;
+}
+
+.logo {
+    position: relative;
+    width: 9.25rem;
+    height: 2.5rem;
+    top: 20px;
+    left: 165px;
+    filter: invert(20%) sepia(100%) saturate(5000%) hue-rotate(0deg);
+    cursor: pointer;
+    z-index: 3;
+}
+
+.signin-button {
+    position: absolute;
+    right: 165px;
+    top: 20px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 4px;
+    z-index: 3;
+    transition-duration: 0.3s;
+}
+
+.signin-button:hover {
+    transition: 0.3s ease-in-out;
+    background-color: #f40612c2;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 3;
+    top: 160px;
+}
+
+.topbar {
+    overflow: hidden;
+}
+
+.curve-divider {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 140px;
+    z-index: 3;
+    pointer-events: none;
+    margin-bottom: -30px;
+    border: none;
+}
+
+.curve-divider svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+}
+
+.trending-now {
+    margin: 0;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.trending-now h1 {
+    padding-top: 20px;
+    margin-left: 50px;
+}
+
+.trending-cards {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;
+    margin: 10px 30px;
+    gap: 30px;
+}
+
+.trending-cards img {
+    border-radius: 10px;
+    height: 250px;
+    cursor: pointer;
+}
+
+.trending-cards::-webkit-scrollbar {
+    display: none;
+}
+
+.trending-cards {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
