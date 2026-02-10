@@ -1,13 +1,18 @@
+/* Global styles */
 body {
     margin: 0;
+    background-color: black;
+    color: white;
 }
 
+/* Top hero section */
 .topbar {
     background: url('resources/background.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     position: relative;
     z-index: 3;
+    overflow: hidden;
 }
 
 .logo {
@@ -33,39 +38,34 @@ body {
     cursor: pointer;
     border-radius: 4px;
     z-index: 3;
-    transition-duration: 0.3s;
+    transition: background-color 0.3s ease-in-out;
 }
 
-.signin-button:hover {
-    transition: 0.3s ease-in-out;
+.signin-button:hover,
+.get-started:hover,
+.footer-get-started:hover {
     background-color: #f40612c2;
 }
 
 .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
 }
 
+/* Hero text content */
 .hero {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
     z-index: 3;
     top: 160px;
 }
 
-.topbar {
-    overflow: hidden;
-}
-
+/* Curve divider */
 .curve-divider {
     position: absolute;
     left: 0;
@@ -75,47 +75,312 @@ body {
     z-index: 3;
     pointer-events: none;
     margin-bottom: -30px;
-    border: none;
 }
 
 .curve-divider svg {
     width: 100%;
     height: 100%;
     display: block;
-    border: none;
 }
 
+/* Trending cards */
+
+/* Trending section */
 .trending-now {
     margin: 0;
     background-color: black;
-    color: white;
     border: none;
-}
-
-.trending-now h1 {
-    padding-top: 20px;
-    margin-left: 50px;
+    padding: 30px;
 }
 
 .trending-cards {
     display: flex;
     overflow-x: auto;
     padding: 20px;
-    margin: 10px 30px;
+    margin: 10px 20px;
     gap: 30px;
-}
-
-.trending-cards img {
-    border-radius: 10px;
-    height: 250px;
-    cursor: pointer;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-y: hidden;
 }
 
 .trending-cards::-webkit-scrollbar {
     display: none;
 }
 
-.trending-cards {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+.trend-card {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: visible;
+    flex: 0 0 auto;
+}
+
+.rank {
+    position: absolute;
+    left: -18px;
+    bottom: -22px;
+    font-size: 140px;
+    font-weight: 900;
+    line-height: 1;
+    color: black;
+    -webkit-text-stroke: 1px #bfbfbf;
+    text-stroke: 6px #bfbfbf;
+    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.7));
+    z-index: 5;
+    pointer-events: none;
+}
+
+.rank.rank-2 {
+    font-size: 120px;
+    left: -28px;
+}
+
+.trend-card img {
+    border-radius: 10px;
+    height: 250px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.trend-card img:hover {
+    transform: translateY(-7px) translateX(1px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* More reasons to join section */
+.reasons-to-join {
+    padding: 30px 0;
+}
+
+.reasons-to-join .header {
+    padding: 0 30px 20px;
+}
+
+.join-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 0 30px;
+    flex-wrap: wrap;
+    padding-left: 50px;
+}
+
+.join {
+    background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+    color: white;
+    border: none;
+    padding: 30px;
+    width: 225px;
+    height: 225px;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+/* FAQ section */
+.faq-item {
+    background: #2d2d2d;
+    margin: 8px 60px;
+}
+
+.faq h2 {
+    margin-left: 60px;
+    margin-top: 40px;
+}
+
+.faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    border-bottom: 1px solid black;
+    
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item p {
+    padding: 10px 24px 24px;
+    margin: 0;
+    color: #ddd;
+    font-size: 16px;
+}
+
+.faq-item .icon {
+    font-size: 36px;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+    margin-right: 20px;
+}
+
+.faq-item[open] .icon {
+    transform: rotate(45deg);
+}
+
+/* Email inputs and buttons */
+.email,
+.footer-email {
+    color: white;
+    height: 40px;
+    width: 320px;
+    border: none;
+    border-radius: 3px;
+}
+
+.email::placeholder {
+    color: black;
+    padding-left: 20px;
+}
+
+.footer-email::placeholder {
+    color: black;
+    padding-left: 20px;
+}
+
+.get-started,
+.footer-get-started {
+    background-color: red;
+    color: white;
+    height: 42px;
+    width: 120px;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    border-radius: 3px;
+}
+
+/* Footer */
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 160px;
+}
+
+.footer-links li {
+    list-style-type: none;
+    text-decoration: underline;
+}
+
+.footer-links a {
+    color: gray;
+}
+
+.input-button {
+    padding: 60px 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.input-button center {
+    width: 100%;
+    max-width: 980px;
+}
+
+.input-button p {
+    margin: 0 0 18px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-email {
+    width: 580px;
+    max-width: 65vw;
+    height: 56px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(0, 0, 0, 0.35);
+    color: #fff;
+    outline: none;
+    font-size: 16px;
+}
+
+.footer-email::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-get-started {
+    height: 56px;
+    padding: 0 10px;
+    border-radius: 4px;
+    border: none;
+    background: #e50914;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.footer {
+    padding: 40px 0 60px;
+    max-width: 980px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-call {
+    margin: 0 0 26px;
+    font-size: 16px;
+    padding: 0 30px;
+}
+
+.footer-call a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: underline;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(160px, 1fr));
+    gap: 12px 30px;
+    padding: 0 30px;
+    margin: 0 0 28px;
+}
+
+.footer-links ul {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.lang {
+    margin: 0 30px 22px;
+    padding: 10px 14px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(0, 0, 0, 0.35);
+    color: #fff;
+    width: 140px;
+}
+
+.footer p {
+    margin: 16px 30px 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer p a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: underline;
 }
