@@ -91,6 +91,13 @@ body {
     background-color: black;
     border: none;
     padding: 30px;
+    width: 85vw;
+    padding-bottom: 0;
+}
+
+.trending-now-h2 {
+    padding-left: 40px;
+    padding-top: 30px;
 }
 
 .trending-cards {
@@ -102,6 +109,7 @@ body {
     scrollbar-width: none;
     -ms-overflow-style: none;
     overflow-y: hidden;
+    margin-left: 120px;
 }
 
 .trending-cards::-webkit-scrollbar {
@@ -153,6 +161,7 @@ body {
 /* More reasons to join section */
 .reasons-to-join {
     padding: 30px 0;
+    margin-left: 24px;
 }
 
 .reasons-to-join .header {
@@ -179,10 +188,33 @@ body {
     border-radius: 10px;
 }
 
+.join-content h3 {
+    margin-top: 0;
+    padding-bottom: 20px;
+    font-size: 21px;
+}
+
+.join-content p {
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+.join {
+    display: flex;
+    flex-direction: column;
+}
+
+.join img {
+    width: 65px;
+    height: 65px;
+    margin-top: auto;
+    margin-left: auto;
+}
 /* FAQ section */
+
 .faq-item {
     background: #2d2d2d;
-    margin: 8px 60px;
+    margin: 8px 100px;
 }
 
 .faq h2 {
@@ -209,7 +241,7 @@ body {
 }
 
 .faq-item p {
-    padding: 10px 24px 24px;
+    padding: 20px 24px 24px;
     margin: 0;
     color: #ddd;
     font-size: 16px;
@@ -227,17 +259,21 @@ body {
 }
 
 /* Email inputs and buttons */
-.email,
-.footer-email {
-    color: white;
-    height: 40px;
-    width: 320px;
-    border: none;
-    border-radius: 3px;
+.email {
+    width: 580px;
+    max-width: 65vw;
+    height: 52px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(0, 0, 0, 0.35);
+    color: #fff;
+    outline: none;
+    font-size: 16px;
 }
 
 .email::placeholder {
-    color: black;
+    color: white;
     padding-left: 20px;
 }
 
@@ -250,7 +286,7 @@ body {
 .footer-get-started {
     background-color: red;
     color: white;
-    height: 42px;
+    height: 52px;
     width: 120px;
     border: none;
     cursor: pointer;
@@ -275,7 +311,7 @@ body {
 }
 
 .input-button {
-    padding: 60px 0 20px;
+    padding: 40px 0 20px;
     display: flex;
     justify-content: center;
 }
@@ -330,9 +366,8 @@ body {
 }
 
 .footer-call {
-    margin: 0 0 26px;
     font-size: 16px;
-    padding: 0 30px;
+    padding-bottom: 20px;
 }
 
 .footer-call a {
@@ -366,7 +401,7 @@ body {
 
 .lang {
     margin: 0 30px 22px;
-    padding: 10px 14px;
+    padding: 10px 5px;
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.25);
     background: rgba(0, 0, 0, 0.35);
@@ -383,4 +418,15 @@ body {
 .footer p a {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: underline;
+}
+
+.trailer {
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.trailer-text {
+    font-size: 16px;
+    font-weight: 500;
 }
