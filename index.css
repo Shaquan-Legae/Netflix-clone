@@ -166,6 +166,7 @@ body {
 
 .reasons-to-join .header {
     padding: 0 30px 20px;
+    margin-left: 20px;
 }
 
 .join-cards {
@@ -174,7 +175,7 @@ body {
     gap: 20px;
     padding: 0 30px;
     flex-wrap: wrap;
-    padding-left: 50px;
+    padding-left: 73px;
 }
 
 .join {
@@ -182,8 +183,8 @@ body {
     color: white;
     border: none;
     padding: 30px;
-    width: 225px;
-    height: 225px;
+    width: 215px;
+    height: 250px;
     font-size: 15px;
     border-radius: 10px;
 }
@@ -209,6 +210,8 @@ body {
     height: 65px;
     margin-top: auto;
     margin-left: auto;
+    margin-right: -15px;
+    margin-bottom: -15  px;
 }
 /* FAQ section */
 
