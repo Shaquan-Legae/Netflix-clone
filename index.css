@@ -516,6 +516,38 @@ body {
     .footer-links {
         grid-template-columns: repeat(2, minmax(160px, 1fr));
     }
+    /* Hero Email */
+    .email-form {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 20px;
+    }
+
+    .email {
+        width: 420px;
+        max-width: 70vw;
+    }
+
+    /* Footer Email */
+    .input-button {
+        padding: 40px 20px 20px;
+    }
+
+    .footer-email {
+        width: 420px;
+        max-width: 70vw;
+    }
+
+    .footer-get-started {
+        width: 150px;
+    }
+
+    /* Curve Divider */
+    .curve-divider {
+        height: 100px;
+        margin-bottom: -20px;
+    }
 }
 
 /* Responsive: Mobile */
@@ -716,6 +748,57 @@ body {
         margin-top: 10px;
         font-size: 16px;
     }
+    /* Hero Email Layout */
+    .email-form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 0 16px;
+        align-items: stretch;
+    }
+
+    .email {
+        width: 100%;
+        max-width: 100%;
+        height: 48px;
+        font-size: 16px;
+    }
+
+    .get-started {
+        width: 100%;
+        height: 48px;
+        font-size: 16px;
+    }
+
+    /* Footer Email Layout */
+    .input-button {
+        padding: 30px 16px 16px;
+    }
+
+    .footer-email {
+        width: 100%;
+        max-width: 100%;
+        height: 48px;
+        font-size: 16px;
+    }
+
+    .footer-get-started {
+        width: 100%;
+        height: 48px;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    /* Curve Divider Fix */
+    .curve-divider {
+        position: relative;
+        height: 80px;
+        margin-bottom: -10px;
+    }
+
+    .curve-divider svg {
+        height: 80px;
+    }
 }
 
 /* Responsive: Very small phones */
@@ -734,5 +817,24 @@ body {
 
     .rank.rank-2 {
         font-size: 82px;
+    }
+    .email,
+    .footer-email {
+        font-size: 14px;
+        height: 44px;
+    }
+
+    .get-started,
+    .footer-get-started {
+        height: 44px;
+        font-size: 14px;
+    }
+
+    .curve-divider {
+        height: 70px;
+    }
+
+    .curve-divider svg {
+        height: 70px;
     }
 }
